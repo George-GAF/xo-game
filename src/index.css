@@ -1,0 +1,90 @@
+:root {
+  --size: 120px;
+}
+
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+  text-shadow: 0 0 4px;
+}
+ul {
+  list-style-type: none;
+}
+.steps button:focus {
+  outline: none;
+}
+.steps button {
+  border-radius: 6px;
+  border: none;
+  padding: 10px 15px;
+  background-color: #7898ea;
+  font-weight: bold;
+  color: white;
+  box-shadow: 0 0 6px 2px #00000066;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+ol,
+ul {
+  padding-left: 30px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+  font-size: 35px;
+  font-weight: bold;
+  text-shadow: 0 0 3px;
+}
+
+.square {
+  width: var(--size);
+  height: var(--size);
+  line-height: var(--size);
+  font-size: var(--size);
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-weight: 100;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+
+  color: #00000000;
+  border-radius: 5px;
+}
+
+.b-palyer {
+  text-shadow: 0px 0 6px #eee, 0px 0 8px #0000ff, 0px 0 10px rgb(2, 2, 155),
+    0px 0 12px rgb(3, 3, 94), 0px 0 14px rgb(2, 2, 155),
+    0px 0 16px rgb(40, 40, 243);
+}
+.r-palyer {
+  text-shadow: 0px 0 6px #eee, 0px 0 8px #ff0000, 0px 0 10px rgb(155, 2, 2),
+    0px 0 12px rgb(94, 3, 3), 0px 0 14px rgb(155, 2, 2),
+    0px 0 16px rgb(243, 40, 40);
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.game-info {
+  margin-left: 20px;
+}
