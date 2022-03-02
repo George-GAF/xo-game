@@ -32,6 +32,8 @@ ul {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
+  align-self: baseline;
+  margin-left: 10%;
 }
 .board-row:after {
   clear: both;
@@ -59,17 +61,16 @@ ul {
   margin-top: -1px;
   padding: 0;
   text-align: center;
-
   color: #00000000;
   border-radius: 5px;
 }
 
-.b-palyer {
+.first-player {
   text-shadow: 0px 0 6px #eee, 0px 0 8px #0000ff, 0px 0 10px rgb(2, 2, 155),
     0px 0 12px rgb(3, 3, 94), 0px 0 14px rgb(2, 2, 155),
     0px 0 16px rgb(40, 40, 243);
 }
-.r-palyer {
+.second-player {
   text-shadow: 0px 0 6px #eee, 0px 0 8px #ff0000, 0px 0 10px rgb(155, 2, 2),
     0px 0 12px rgb(94, 3, 3), 0px 0 14px rgb(155, 2, 2),
     0px 0 16px rgb(243, 40, 40);
@@ -86,9 +87,11 @@ ul {
 .game {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
+  
 }
 
 .game-info {
   margin-left: 20px;
+  min-width: 250px;
 }

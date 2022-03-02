@@ -27,7 +27,7 @@ function App(props) {
         const history = state.history.slice(0, state.stepNumber + 1);
         const current = history[history.length - 1];
         const squares = current.squares.slice();
-        
+
         // check if player win 
         if (calculateWinner(squares) || squares[i]) {
             return;
@@ -48,11 +48,10 @@ function App(props) {
     }
     // move between steps history
     function jumpTo(step) {
-
-        setState(prev=>({
+        setState(prev => ({
             ...prev,
-            stepNumber: step, 
-            xIsNext: step % 2 === 0, 
+            stepNumber: step,
+            xIsNext: step % 2 === 0,
         }));
     }
     // create list of movies
@@ -74,19 +73,16 @@ function App(props) {
 
     return (
         <div className="game">
-            <div className="game-board">
-                <div className="board">
-                    {
-                        Array(9).fill(null).map((square, index) =>
-                            <Square
-                                key={index}
-                                value={current.squares[index]}
-                                onClick={() => handleClick(index)}//send function to square components 
-                            />
-                        )
-                    }
-
-                </div>
+            <div className="board">
+                {
+                    Array(9).fill(null).map((square, index) =>
+                        <Square
+                            key={index}
+                            value={current.squares[index]}
+                            onClick={() => handleClick(index)}//send function to square components 
+                        />
+                    )
+                }
             </div>
             <div className="game-info">
                 <div className="status">{status}</div>
